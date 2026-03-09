@@ -161,6 +161,27 @@
         .hamburger.active span:nth-child(3){
             transform: rotate(-45deg);
         }
+
+        /* OVERLAY para fechar menu ao clicar fora */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
         /* ===== HERO ESPETACULAR ===== */
         .hero {
             background: linear-gradient(135deg, var(--haiti-navy) 0%, #1a304a 40%, var(--haiti-red) 100%);
