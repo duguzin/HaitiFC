@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Haiti FC · Haiti Lutas · Imagens Corrigidas</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Outfit + Bangers -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+</head>
+<body>
+
+<!-- BARRA ÚNICA FIXA -->
+<div class="main-nav">
+    <div class="nav-container">
+        <div class="logo"><h1>HAITI FC</h1></div>
+        <div class="nav-menu">
+            <ul class="nav-list" id="navList">
+                <li><a href="#historia"><i class="fas fa-scroll"></i> história</a></li>
+                <li><a href="#presidente"><i class="fas fa-crown"></i> presidente</a></li>
+                <li><a href="#jogadores"><i class="fas fa-users"></i> jogadores</a></li>
+                <li><a href="#jogos"><i class="fas fa-futbol"></i> jogos</a></li>
+                <li><a href="#lutas"><i class="fas fa-fist-raised"></i> lutas</a></li>
+                <li><a href="#noticias"><i class="fas fa-newspaper"></i> notícias</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HERO ESPETACULAR -->
+<!-- <div class="hero">
+    <div class="hero-bg-elements">
+        <span>⚽</span>
+        <span>HAITI FC</span>
+        <span>🥊</span>
+        <span>🇭🇹</span>
+    </div>
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>HAITI FUTEBOL CLUBE</h2>
+                <p><i class="fas fa-calendar-alt"></i> novembro 2024 · amigos, raça e tradição</p>
+                <p><i class="fas fa-fist-raised"></i> HAITI LUTAS · boxe · jiu-jitsu · wrestling</p>
+            </div>
+            <div class="hero-flag">
+                <i class="fas fa-flag"></i>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <!-- SLIDER (APENAS ISSO É SLIDER) -->
+    <div class="slider-container" id="sliderContainer">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <div class="slide-image" id="slide1-img" style="background-image: url('IMAGENS/haiti-fim-de-jogo-2.jpeg')"></div>
+                <div class="slide-content">
+                    <i class="fas fa-trophy"></i>
+                    <h3>HAITI NA FINAL</h3>
+                    <p>Time venceu a semifinal por 7 a 5 contra o Kenya.</p>
+                    <span class="date-badge">21 fev 2025</span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-image" id="slide2-img" style="background-image: url('./IMAGENS/despedida-felipe.jpeg')"></div>
+                <div class="slide-content">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>DESPEDIDA</h3>
+                    <p>O time se despede de nosso grande artilheiro e camisa 9 Felipe</p>
+                    <span class="date-badge">18 mai 2025</span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-image" id="slide3-img" style="background-image: url('./IMAGENS/base-haiti.jpeg')"></div>
+                <div class="slide-content">
+                    <i class="fas fa-seedling"></i>
+                    <h3>BASE EM ALTA</h3>
+                    <p>Dia de treinamento e peneira com a base.</p>
+                    <span class="date-badge">20 abr 2025</span>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" id="prevSlide">❮</button>
+        <button class="slider-btn next" id="nextSlide">❯</button>
+    </div>
+</div>
+
+<main>
+    <!-- HISTÓRIA -->
+    <section id="historia">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> nossa história</h2>
+            <div class="historia-grid">
+                <div class="historia-imagem" id="historia-img" style="background-image: url('./IMAGENS/foto-haiti.jpeg')"></div>
+                <div class="historia-texto">
+                    <h3>uma família chamada Haiti</h3>
+                    <p>Tudo começou em novembro de 2024, quando um grupo de amigos decidiu criar um time de futebol que representasse a união e a garra. O nome Haiti foi escolhido como homenagem à resiliência do povo haitiano.</p>
+                    <p>O primeiro treino foi no campinho do próprio Haiti, com mais vontade do que chuteiras. Hoje somos mais de 20 atletas e uma modalidade de lutas.</p>
+                </div>
+            </div>
+            <div class="cards-historia">
+                <div class="card-historia"><i class="fas fa-handshake"></i><h4>fundação</h4><p>Nov/2024 · 6 amigos</p></div>
+                <div class="card-historia"><i class="fas fa-trophy"></i><h4>1ª vitória</h4><p>4x2 Inglaterra</p></div>
+                <div class="card-historia"><i class="fas fa-dove"></i><h4>espírito</h4><p>homenagem Haiti</p></div>
+                <div class="card-historia"><i class="fas fa-fist-raised"></i><h4>haiti lutas</h4><p>desde jan/2026</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESIDENTE -->
+    <section id="presidente">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-crown"></i> nosso presidente</h2>
+            <div class="presidente-card">
+                <div class="presidente-foto" id="presidente-img" style="background-image: url('./IMAGENS/presidente-haiti.jpeg')"></div>
+                <div class="presidente-texto">
+                    <h3>Fernando "Fernandão"</h3>
+                    <p>Haiti elege seu presidente que veste a camisa com o coração.</p>
+                    <p><i class="fas fa-quote-right"></i> "O Haiti FC é a prova que um sonho de amigos pode virar um gigante."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOGADORES -->
+    <section id="jogadores">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-users"></i> nossos jogadores</h2>
+            <div class="players-grid">
+                <div class="player-card">
+                    <div class="player-img" id="jogador1-img" style="background-image: url('./IMAGENS/JOGADORES/haiti-gusta.png')"></div>
+                    <h4>Gusta</h4>
+                    <p>goleiro - 1</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador2-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-firmino.png)"></div>
+                    <h4>Firmino</h4>
+                    <p>21</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador3-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-digo.png)"></div>
+                    <h4>Digo</h4>
+                    <p>19</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador4-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-bryan.png)"></div>
+                    <h4>Bryan</h4>
+                    <p>16</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador5-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-vito.png)"></div>
+                    <h4>Vito</h4>
+                    <p>8</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-guigui.png)"></div>
+                    <h4>GuiGui</h4>
+                    <p>6</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-dugu.png)"></div>
+                    <h4>Dugu</h4>
+                    <p>11</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-baby.png)"></div>
+                    <h4>BabyMonkey</h4>
+                    <p>10</p>
+                </div>
+                <div class="player-card">
+                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-felipe.png)"></div>
+                    <h4>Felipe</h4>
+                    <p>9</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOGOS -->
+    <section id="jogos">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-camera-retro"></i> momentos dos jogos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" id="jogo1-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-jogo-fora.jpeg')">
+                    <div class="legenda">mai/25</div>
+                </div>
+                <div class="gallery-item" id="jogo2-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-treino-base.jpeg')">
+                    <div class="legenda">jun/25</div>
+                </div>
+                <div class="gallery-item" id="jogo3-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-treino-final.jpeg')">
+                    <div class="legenda">jul/25</div>
+                </div>
+                <div class="gallery-item" id="jogo4-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/filhos-haiti.jpeg')">
+                    <div class="legenda">fev/25</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUTAS -->
+    <section id="lutas">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-fist-raised"></i> haiti lutas</h2>
+            <div class="lutas-block">
+                <div style="flex:2"><h3>🥊 FORÇA & HONRA</h3><p>Jiu-jitsu, wrestling, no gi e luta livre. Mestre Nilson.</p></div>
+                <div style="flex:1; text-align:center;"><i class="fas fa-hand-back-fist" style="font-size: clamp(4rem, 10vw, 6rem); color:var(--haiti-gold);"></i></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" id="luta1-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-1.jpeg')">
+                    <div class="legenda">mar/26</div>
+                </div>
+                <div class="gallery-item" id="luta2-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-2.jpeg')">
+                    <div class="legenda">mar/26</div>
+                </div>
+                <div class="gallery-item" id="luta3-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-3.jpeg')">
+                    <div class="legenda">fev/26</div>
+                </div>
+                <div class="gallery-item" id="luta4-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-4.jpeg')">
+                    <div class="legenda">out/25</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTÍCIAS -->
+    <section id="noticias">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> últimas notícias</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">05 mar 2025</span><h4 style="font-size:1.5rem;">🇭🇹 Haiti na final</h4><p>Venceu a semifinal por 4 a 2.</p></div>
+                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">29 mar 2026</span><h4 style="font-size:1.5rem;">🥊 Lutas estreia</h4><p>Dugu lutará o Favela Fight.</p></div>
+                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">01 fev 2025</span><h4 style="font-size:1.5rem;">⚡ base em alta</h4><p>João Ferro convocado.</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Haiti FC</h4>
+                <p><i class="fas fa-calendar-alt"></i> nov/2024</p>
+                <p><i class="fas fa-map-marker-alt"></i> Campo do Haiti</p>
+                <p><i class="fas fa-users"></i> 20+ atletas</p>
+            </div>
+            <div class="footer-col">
+                <h4>Haiti Lutas</h4>
+                <p><i class="fas fa-fist-raised"></i> nogi · jiu-jitsu</p>
+                <p><i class="fas fa-clock"></i> ter · qui 18:15h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-envelope"></i> haitioficial157@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> em breve</p>
+                
+                <div class="social-icons">
+
+                    <a href="https://www.instagram.com/haitioficial157?igsh=MTBiN3R5aHhzaWhvMA==" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://discord.gg/XvxWByEC" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><i class="fas fa-futbol"></i> HAITI FUTEBOL CLUBE · HAITI LUTAS <i class="fas fa-fist-raised"></i></p>
+            <p>© 2025 · orgulho haitiano</p>
+            <div class="footer-flag">
+                <i class="fas fa-square" style="color:var(--haiti-navy);"></i>
+                <i class="fas fa-square" style="color:var(--haiti-red);"></i>
+                <i class="fas fa-square" style="color:var(--haiti-gold);"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    // FUNÇÃO PARA FALLBACK DE IMAGENS
+    function setImageFallback(imgElement, text) {
+        const svgFallback = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="%23A0B0C0"><rect width="400" height="400" fill="%230C2340"/><text x="200" y="220" font-size="60" text-anchor="middle" fill="%23E9C46A" font-family="Bangers">${text}</text></svg>')`;
+        imgElement.style.backgroundImage = svgFallback;
+        imgElement.classList.add('img-fallback');
+    }
+
+    // APLICAR FALLBACK PARA CADA IMAGEM
+    const imagensComFallback = [
+        { elemento: document.getElementById('slide1-img'), texto: 'FINAL' },
+        { elemento: document.getElementById('slide2-img'), texto: 'LUTAS' },
+        { elemento: document.getElementById('slide3-img'), texto: 'BASE' },
+        { elemento: document.getElementById('historia-img'), texto: 'HISTÓRIA' },
+        { elemento: document.getElementById('presidente-img'), texto: 'R10' },
+        { elemento: document.getElementById('jogador1-img'), texto: 'R10' },
+        { elemento: document.getElementById('jogador2-img'), texto: 'LT' },
+        { elemento: document.getElementById('jogador3-img'), texto: 'AA' },
+        { elemento: document.getElementById('jogador4-img'), texto: 'MV' },
+        { elemento: document.getElementById('jogador5-img'), texto: 'FP' },
+        { elemento: document.getElementById('jogador6-img'), texto: 'CS' },
+        { elemento: document.getElementById('jogo1-img'), texto: '6X2' },
+        { elemento: document.getElementById('jogo2-img'), texto: 'CLÁSSICO' },
+        { elemento: document.getElementById('jogo3-img'), texto: 'ACAMP' },
+        { elemento: document.getElementById('jogo4-img'), texto: 'TAÇA' },
+        { elemento: document.getElementById('luta1-img'), texto: 'BOXE' },
+        { elemento: document.getElementById('luta2-img'), texto: 'JIU' },
+        { elemento: document.getElementById('luta3-img'), texto: 'SPAR' },
+        { elemento: document.getElementById('luta4-img'), texto: 'PÓDIO' }
+    ];
+
+    imagensComFallback.forEach(item => {
+        if (item.elemento) {
+            // Verificar se a imagem carregou
+            const img = new Image();
+            const bgImage = item.elemento.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
+            
+            if (bgImage && bgImage !== 'none' && bgImage !== 'undefined') {
+                img.src = bgImage;
+                img.onload = () => {
+                    // Imagem carregou, manter original
+                    item.elemento.classList.remove('image-loading');
+                };
+                img.onerror = () => {
+                    // Falha no carregamento, aplicar fallback
+                    setImageFallback(item.elemento, item.texto);
+                    item.elemento.classList.remove('image-loading');
+                };
+            } else {
+                // Se não tem imagem definida, aplicar fallback direto
+                setImageFallback(item.elemento, item.texto);
+                item.elemento.classList.remove('image-loading');
+            }
+        }
+    });
+
+    // MENU HAMBÚRGUER
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-list li a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            hamburger.classList.remove('active');
+            navList.classList.remove('active');
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // SLIDER COM SWIPE
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
+    let isDragging = false;
+    const threshold = 50;
+
+    function updateSlider() { 
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`; 
+    }
+
+    nextBtn.addEventListener('click', () => { 
+        currentIndex = (currentIndex + 1) % slides.length; 
+        updateSlider(); 
+    });
+
+    prevBtn.addEventListener('click', () => { 
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length; 
+        updateSlider(); 
+    });
+
+    slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        slider.style.transition = 'none';
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        endX = e.touches[0].clientX;
+        const diff = endX - startX;
+        const offset = -currentIndex * 100 + (diff / slider.offsetWidth) * 100;
+        slider.style.transform = `translateX(${offset}%)`;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        slider.style.transition = 'transform 0.4s ease-out';
+        
+        const diff = endX - startX;
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            } else {
+                currentIndex = (currentIndex + 1) % slides.length;
+            }
+        }
+        updateSlider();
+    });
+
+    slider.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+        slider.style.transition = 'none';
+        e.preventDefault();
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        endX = e.clientX;
+        const diff = endX - startX;
+        const offset = -currentIndex * 100 + (diff / slider.offsetWidth) * 100;
+        slider.style.transform = `translateX(${offset}%)`;
+    });
+
+    slider.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        slider.style.transition = 'transform 0.4s ease-out';
+        
+        const diff = endX - startX;
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            } else {
+                currentIndex = (currentIndex + 1) % slides.length;
+            }
+        }
+        updateSlider();
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            slider.style.transition = 'transform 0.4s ease-out';
+            updateSlider();
+        }
+    });
+
+    setInterval(() => { 
+        if (!isDragging) {
+            currentIndex = (currentIndex + 1) % slides.length; 
+            updateSlider(); 
+        }
+    }, 15000);
+
+    // BOTÃO VOLTAR AO TOPO
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>
