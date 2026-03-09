@@ -1,297 +1,1029 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Haiti FC · Haiti Lutas</title>
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Outfit + Bangers -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfólio de Gustavo Rodrigues - Técnico em Desenvimento de Sistemas e Eletricista de Manutenção Eletroeletrônica">
+  <meta name="keywords" content="desenvolvedor, portfolio, web, eletrônica, projetos">
+  <meta property="og:title" content="Portfólio | Gustavo Rodrigues">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./Css/style.css" />
+  <!-- <link rel="stylesheet" href="./Css/base.css">
+    <link rel="stylesheet" href="./Css/layout.css">
+    <link rel="stylesheet" href="./Css/components.css">
+    <link rel="stylesheet" href="./Css/games.css">
+    <link rel="stylesheet" href="./Css/modal.css">
+    <link rel="stylesheet" href="./Css/themes.css">
+    <link rel="stylesheet" href="./Css/responsive.css"> -->
+  <title>Portfólio | Gustavo</title>
 </head>
+
 <body>
+  <!-- Elementos de fundo decorativos -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
 
-<!-- BARRA ÚNICA FIXA -->
-<div class="main-nav">
-    <div class="nav-container">
-        <div class="logo"><h1>HAITI FC</h1></div>
-        <div class="nav-menu">
-            <ul class="nav-list" id="navList">
-                <li><a href="#historia"><i class="fas fa-scroll"></i> história</a></li>
-                <li><a href="#presidente"><i class="fas fa-crown"></i> presidente</a></li>
-                <li><a href="#jogadores"><i class="fas fa-users"></i> jogadores</a></li>
-                <li><a href="#jogos"><i class="fas fa-futbol"></i> jogos</a></li>
-                <li><a href="#lutas"><i class="fas fa-fist-raised"></i> lutas</a></li>
-                <li><a href="#noticias"><i class="fas fa-newspaper"></i> notícias</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+  <header>
+    <nav class="nav-bar">
+      <div class="container-nav">
+        <div class="logo">
+          <div class="logo-icon">⚡</div>
+          <h1>Gustavo<span>.dev</span></h1>
         </div>
+
+        <!-- Menu Desktop -->
+        <div class="nav-links">
+          <a href="#home">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#duoFlow">DuoFlow</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <!-- Botão Tema e Menu Hamburger -->
+        <div class="nav-right">
+          <button id="tema-toggle" class="tema-button">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <!-- Menu Hamburger -->
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <div class="logo-icon">⚡</div>
+          <h1>Gustavo<span>.dev</span></h1>
+        </div>
+        <button id="menuClose" class="menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-nav-links">
+        <a href="#home" class="mobile-nav-link">
+          <i class="fas fa-home"></i> Início
+        </a>
+        <a href="#sobre" class="mobile-nav-link">
+          <i class="fas fa-user-astronaut"></i> Sobre
+        </a>
+        <a href="#projetos" class="mobile-nav-link">
+          <i class="fas fa-rocket"></i> Projetos
+        </a>
+        <a href="#duoFlow" class="mobile-nav-link">
+          <i class="fas fa-code-branch"></i> DuoFlow
+        </a>
+        <a href="#contato" class="mobile-nav-link">
+          <i class="fas fa-comment-dots"></i> Contato
+        </a>
+
+        <div class="mobile-menu-footer">
+          <button id="mobileTemaToggle" class="mobile-tema-toggle">
+            <i class="fas fa-moon"></i> Tema Escuro
+          </button>
+        </div>
+      </div>
     </div>
-</div>
 
-<!-- HERO ESPETACULAR -->
-<!-- <div class="hero">
-    <div class="hero-bg-elements">
-        <span>⚽</span>
-        <span>HAITI FC</span>
-        <span>🥊</span>
-        <span>🇭🇹</span>
+    <!-- Overlay do Menu Mobile -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="tag">👋 Olá, eu sou</div>
+          <h2>Gustavo <span class="highlight">Rodrigues</span></h2>
+          <div class="typewriter">
+            <p></p>
+          </div>
+          <p class="hero-desc">Unindo código e circuitos para criar soluções criativas e funcionais!</p>
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn-primary">
+              <i class="fas fa-rocket"></i> Ver Projetos
+            </a>
+            <a href="#contato" class="btn-secondary">
+              <i class="fas fa-paper-plane"></i> Entrar em Contato
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-container">
+            <div class="avatar">
+              <div class="avatar-face">
+                <div class="avatar-eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="avatar-smile"></div>
+              </div>
+              <div class="avatar-decoration">
+                <div class="decoration-1">{"</>"}</div>
+                <div class="decoration-2">⚡</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="section-header">
+        <h2><i class="fas fa-user-astronaut"></i> Sobre Mim</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-card">
+            <h3><i class="fas fa-graduation-cap"></i> Formação</h3>
+            <p>Sou estudante de <span class="highlight-text">Análise e Desenvolvimento de Sistemas</span> na Fatec
+              Carapicuíba, com formação técnica em Desenvolvimento de Sistemas pela ETEC Carapicuíba (2022–2025).</p>
+            <p>Sou formado em <span class="highlight-text">Eletricista de Manutenção Eletroeletrônica</span> pelo SENAI
+              Barueri, com foco em automação industrial e sistemas elétricos.</p>
+
+          </div>
+
+          <div class="about-card">
+            <h3><i class="fas fa-bullseye"></i> Objetivo</h3>
+            <p>Busco unir tecnologia e eletricidade para criar soluções inovadoras, com foco em qualidade, segurança e
+              eficiência. Meu objetivo é desenvolver projetos que integrem software e hardware de forma criativa.</p>
+          </div>
+
+          <div class="skills">
+            <h3><i class="fas fa-code"></i> Habilidades</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Flutter/Dart</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Arduino/ESP32</span>
+              <span class="skill-tag">IoT</span>
+              <span class="skill-tag">Comandos Elétricos</span>
+              <span class="skill-tag">Automação</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="floating-icons">
+            <div class="floating-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="floating-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="floating-icon"><i class="fas fa-database"></i></div>
+            <div class="floating-icon"><i class="fas fa-robot"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects">
+      <div class="section-header">
+        <h2><i class="fas fa-rocket"></i> Meus Projetos</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Ideias que ganharam vida através do código e circuitos</p>
+      </div>
+
+      <div class="project-cards">
+        <!-- Projetos originais -->
+        <!-- <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <div class="project-content">
+            <h3>Regador Automático</h3>
+            <p>Projeto com ESP32 e sensores para monitoramento e controle de umidade do solo.</p>
+            <div class="project-tech">
+              <span>ESP32</span>
+              <span>IoT</span>
+              <span>C++</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="regador">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div> -->
+
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="project-content">
+            <h3>CultivaMais</h3>
+            <p>E-commerce para pequenos agricultores venderem seus produtos diretamente aos consumidores.</p>
+            <div class="project-tech">
+              <span>Web</span>
+              <span>E-commerce</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="cultivamais">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-graduation-cap" id="fa-graduation-cap"></i>
+          </div>
+          <div class="project-content">
+            <h3>Guia360</h3>
+            <p>Plataforma educacional para auxiliar estudantes na preparação para vestibulares e concursos.</p>
+            <div class="project-tech">
+              <span>Educação</span>
+              <span>Web</span>
+              <span>Design</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="guia360">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div>
+
+        <!-- Novos projetos -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-dragon"></i>
+          </div>
+          <div class="project-content">
+            <h3>FitBattle</h3>
+            <p>App gamificado com temática medieval para motivar prática de exercícios físicos.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Firebase</span>
+              <span>Mobile</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="fitbattle">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="project-content">
+            <h3>Banco Digital Python</h3>
+            <p>Sistema bancário digital completo com back-end Python/Flask e front-end JavaScript.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>JavaScript</span>
+              <span>API REST</span>
+              <span>Web</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="bancodigital">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-ice-cream"></i>
+          </div>
+          <div class="project-content">
+            <h3>MilkMoo</h3>
+            <p>Sistema triplo de atendimento para sorveteria com 3 interfaces integradas em tempo real.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+              <span>Web</span>
+              <span>Canvas</span>
+            </div>
+          </div>
+          <button class="project-btn" data-projeto="milkmoo">
+            <i class="fas fa-expand-alt"></i> Detalhes
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="duoFlow" class="duoflow-game">
+      <div class="section-header">
+        <h2><i class="fas fa-code-branch"></i> DuoFlow</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Veja como eletricidade e programação funcionam em paralelo!</p>
+      </div>
+
+      <div class="duoflow-container">
+
+        <!-- Tela Inicial -->
+        <div id="duoflowStart" class="duoflow-screen active">
+          <div class="duoflow-intro">
+            <div class="parallel-concept">
+              <div class="flow-side electric-flow">
+                <div class="flow-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Eletricidade</h3>
+                <p>Fluxo de elétrons através de fios</p>
+              </div>
+
+              <div class="flow-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                  <i class="fas fa-equals"></i>
+                </div>
+                <div class="divider-line"></div>
+              </div>
+
+              <div class="flow-side code-flow">
+                <div class="flow-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3>Programação</h3>
+                <p>Fluxo de dados através de código</p>
+              </div>
+            </div>
+
+            <div class="intro-explanation">
+              <h4>Duas Linguagens, Mesmo Conceito</h4>
+              <p>Assim como <strong>elétrons fluem por fios</strong> para acender uma lâmpada, <strong>dados fluem por
+                  código</strong> para produzir resultados.</p>
+              <p>Arraste os componentes para ver a mágica acontecer em ambos os lados!</p>
+            </div>
+
+            <button id="startDuoflow" class="duoflow-start-btn">
+              <i class="fas fa-play"></i> Ver Paralelo
+            </button>
+          </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="duoflowGame" class="duoflow-screen">
+
+          <!-- Header -->
+          <div class="duoflow-header">
+            <h3><i class="fas fa-random"></i> Paralelo: Fluxo vs Código</h3>
+            <div class="duoflow-progress">
+              <div class="progress-step" data-step="1">Conectar</div>
+              <div class="progress-step" data-step="2">Transmitir</div>
+              <div class="progress-step" data-step="3">Resultado</div>
+            </div>
+          </div>
+
+          <!-- Container Duplo -->
+          <div class="duoflow-main">
+
+            <!-- Lado ESQUERDO: Eletricidade -->
+            <div class="flow-container electric-side">
+              <div class="flow-header">
+                <i class="fas fa-bolt"></i>
+                <h4>Fluxo Elétrico</h4>
+                <span class="flow-subtitle">Elétrons → Lâmpada</span>
+              </div>
+
+              <div class="circuit-simple">
+                <!-- Fonte -->
+                <div class="circuit-part source">
+                  <div class="part-icon">
+                    <i class="fas fa-battery-full"></i>
+                  </div>
+                  <div class="part-label">Fonte</div>
+                </div>
+
+                <!-- Fio -->
+                <div class="wire-container">
+                  <div class="wire-visual" id="electricWire">
+                    <div class="wire-line"></div>
+                    <div class="electron" id="movingElectron">⚡</div>
+                  </div>
+                  <div class="wire-label">Fio Condutor</div>
+                </div>
+
+                <!-- Lâmpada -->
+                <div class="circuit-part lamp" id="electricLamp">
+                  <div class="part-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="part-label">Lâmpada</div>
+                </div>
+              </div>
+
+              <div class="electric-controls">
+                <div class="status-display">
+                  <!-- <span>Status: </span> -->
+                  <span class="status-text" id="electricStatus">Aguardando...</span>
+                </div>
+                <button class="flow-btn electric-btn" id="startElectric">
+                  <i class="fas fa-play"></i> Iniciar Fluxo
+                </button>
+              </div>
+
+              <div class="flow-explanation">
+                <h5><i class="fas fa-info-circle"></i> Como funciona:</h5>
+                <p>Os <strong>elétrons</strong> saem da fonte, viajam pelo fio e chegam à lâmpada, transformando energia
+                  elétrica em luz.</p>
+              </div>
+            </div>
+
+            <!-- Divisor Central -->
+            <div class="flow-divider-main">
+              <div class="divider-vertical">
+                <!-- <div class="vs-badge">
+              <span>VS</span>
+            </div> -->
+              </div>
+            </div>
+
+            <!-- Lado DIREITO: Programação -->
+            <div class="flow-container code-side">
+              <div class="flow-header">
+                <i class="fas fa-code"></i>
+                <h4>Fluxo de Código</h4>
+                <span class="flow-subtitle">Comando → Terminal</span>
+              </div>
+
+              <div class="code-simple">
+                <!-- Bloco de código arrastável -->
+                <div class="code-block-duo" id="helloBlock" draggable="true">
+                  <div class="code-block-header">
+                    <i class="fas fa-cube"></i>
+                    <span>Bloco de Código</span>
+                  </div>
+                  <div class="code-block-content">
+                    <pre>print("Hello World")</pre>
+                  </div>
+                  <div class="code-block-hint">
+                    <i class="fas fa-hand-point-up"></i>
+                    <span>Arraste para o terminal</span>
+                  </div>
+                </div>
+
+                <!-- Terminal -->
+                <div class="terminal-container" id="codeTerminal">
+                  <div class="terminal-header">
+                    <div class="terminal-dots">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">Terminal</span>
+                  </div>
+                  <div class="terminal-output" id="terminalOutput">
+                    <div class="terminal-line">&gt; Sistema pronto...</div>
+                    <div class="terminal-line">&gt; Aguardando comando...</div>
+                  </div>
+                  <div class="terminal-input">
+                    <span class="prompt">&gt;</span>
+                    <span class="input-text" id="inputText">_</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="code-controls">
+                <div class="status-display">
+                  <!-- <span>Status: </span> -->
+                  <span class="status-text" id="codeStatus">Aguardando...</span>
+                </div>
+                <button class="flow-btn code-btn" id="runCode" disabled>
+                  <i class="fas fa-play-circle"></i> Executar
+                </button>
+              </div>
+
+              <div class="flow-explanation">
+                <h5><i class="fas fa-info-circle"></i> Como funciona:</h5>
+                <p>O <strong>comando</strong> é processado pelo sistema, viaja pela execução e produz saída no terminal.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Comparação -->
+          <div class="comparison-box">
+            <h4><i class="fas fa-balance-scale"></i> Paralelo:</h4>
+            <div class="comparison-items">
+              <div class="comparison-item">
+                <span class="comp-icon electric">⚡</span>
+                <span class="comp-text">Elétron = Unidade de energia</span>
+              </div>
+              <div class="comparison-item">
+                <span class="comp-icon code">{}</span>
+                <span class="comp-text">Comando = Unidade de instrução</span>
+              </div>
+              <div class="comparison-item">
+                <span class="comp-icon electric">🔌</span>
+                <span class="comp-text">Fio = Caminho para elétrons</span>
+              </div>
+              <div class="comparison-item">
+                <span class="comp-icon code">📟</span>
+                <span class="comp-text">Terminal = Caminho para dados</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles Gerais -->
+          <div class="duoflow-controls">
+            <button class="duoflow-btn secondary" id="resetDuoflow">
+              <i class="fas fa-redo"></i> Reiniciar
+            </button>
+            <button class="duoflow-btn" id="runBoth">
+              <i class="fas fa-play"></i> Executar Ambos
+            </button>
+          </div>
+        </div>
+
+        <!-- Tela de Conclusão -->
+        <div id="duoflowComplete" class="duoflow-screen">
+          <div class="complete-content">
+            <div class="complete-animation">
+              <div class="parallel-success">
+                <div class="success-side electric-success">
+                  <div class="success-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <span>Luz Acesa</span>
+                </div>
+
+                <div class="success-divider">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+
+                <div class="success-side code-success">
+                  <div class="success-icon">
+                    <i class="fas fa-terminal"></i>
+                  </div>
+                  <span>Hello World!</span>
+                </div>
+              </div>
+            </div>
+
+            <h2><i class="fas fa-trophy"></i> Paralelo Completo!</h2>
+            <p class="complete-message">Você viu como eletricidade e programação seguem o mesmo princípio de fluxo!</p>
+
+            <div class="parallel-insight">
+              <div class="insight-card">
+                <h4><i class="fas fa-bolt"></i> Insight Elétrico:</h4>
+                <p>A eletricidade precisa de um <strong>caminho completo</strong> (circuito fechado) para fluir e
+                  produzir luz.</p>
+              </div>
+              <div class="insight-card">
+                <h4><i class="fas fa-code"></i> Insight de Programação:</h4>
+                <p>O código precisa de um <strong>fluxo lógico correto</strong> (sintaxe + execução) para produzir
+                  resultados.</p>
+              </div>
+            </div>
+
+            <div class="complete-actions">
+              <button class="duoflow-btn" id="playAgainDuo">
+                <i class="fas fa-redo"></i> Ver Novamente
+              </button>
+              <button class="duoflow-btn secondary" id="learnMore">
+                <i class="fas fa-book"></i> Aprender Mais
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Aprender Mais -->
+      <div id="learnModal" class="learn-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3><i class="fas fa-graduation-cap"></i> Aprender Mais</h3>
+            <button class="modal-close" id="closeLearnModal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="learn-columns">
+              <div class="learn-card electric-card">
+                <div class="learn-card-header">
+                  <i class="fas fa-bolt"></i>
+                  <h4>Conceitos de Eletricidade</h4>
+                </div>
+                <div class="learn-card-content">
+                  <ul>
+                    <li><strong>Circuito Fechado:</strong> Caminho completo para os elétrons</li>
+                    <li><strong>Corrente Elétrica:</strong> Fluxo de elétrons através de um condutor</li>
+                    <li><strong>Resistência:</strong> Oposição ao fluxo de corrente</li>
+                    <li><strong>Fonte de Energia:</strong> Fornece diferença de potencial (voltagem)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="learn-card code-card">
+                <div class="learn-card-header">
+                  <i class="fas fa-code"></i>
+                  <h4>Conceitos de Programação</h4>
+                </div>
+                <div class="learn-card-content">
+                  <ul>
+                    <li><strong>Fluxo de Execução:</strong> Ordem em que as instruções são processadas</li>
+                    <li><strong>Funções/Métodos:</strong> Blocos de código reutilizáveis</li>
+                    <li><strong>Input/Output:</strong> Entrada e saída de dados</li>
+                    <li><strong>Sintaxe:</strong> Regras estruturais da linguagem</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="parallel-table">
+              <h5><i class="fas fa-balance-scale"></i> Paralelos Diretos</h5>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Eletricidade</th>
+                    <th>Programação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Elétron → Unidade básica</td>
+                    <td>Bit → Unidade básica</td>
+                  </tr>
+                  <tr>
+                    <td>Fio → Caminho condutor</td>
+                    <td>Variável → Armazenamento</td>
+                  </tr>
+                  <tr>
+                    <td>Circuito → Caminho fechado</td>
+                    <td>Algoritmo → Sequência lógica</td>
+                  </tr>
+                  <tr>
+                    <td>Fonte → Energia</td>
+                    <td>Input → Dados de entrada</td>
+                  </tr>
+                  <tr>
+                    <td>Lâmpada → Saída (luz)</td>
+                    <td>Print() → Saída (texto)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="learn-tip">
+              <i class="fas fa-lightbulb"></i>
+              <p><strong>Dica:</strong> Tanto na eletricidade quanto na programação, o fluxo precisa ser contínuo e
+                lógico para produzir resultados!</p>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="modal-btn" id="closeLearnModalBtn">
+              <i class="fas fa-check"></i> Entendi!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="section-header">
+        <h2><i class="fas fa-comment-dots"></i> Vamos Conversar?</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Entre em contato para colaborações ou apenas para trocar ideias!</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>gustavorodriguessud87@gmail.com</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Localização</h3>
+            <p>Carapicuíba, SP</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Disponibilidade</h3>
+            <p>Aberto a novas oportunidades</p>
+          </div>
+        </div>
+
+        <!-- <div class="social-links">
+          <a href="https://github.com/duguzin" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/gustavo-rodrigues-2288852aa" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.instagram.com/duguzin?igsh=Y2U4MzB1OXdxZzM0" target="_blank" class="social-link instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <!-- Logo e slogan animado -->
+      <div class="footer-header">
+        <div class="footer-logo">
+          <div class="logo-icon">⚡</div>
+          <h2 class="logo-text">Gustavo<span class="logo-highlight">.dev</span></h2>
+        </div>
+        <p class="footer-slogan">
+          <span class="slogan-text">Transformando ideias em</span>
+          <span class="slogan-highlight">realidade digital</span>
+        </p>
+      </div>
+
+      <!-- Conteúdo principal -->
+      <div class="footer-main">
+        <!-- Coluna de navegação -->
+        <div class="footer-column">
+          <h3 class="column-title">
+            <i class="fas fa-compass"></i> Navegação
+          </h3>
+          <div class="footer-nav">
+            <a href="#home" class="footer-nav-link">
+              <i class="fas fa-home"></i>
+              <span>Início</span>
+              <div class="nav-dot"></div>
+            </a>
+            <a href="#sobre" class="footer-nav-link">
+              <i class="fas fa-user-astronaut"></i>
+              <span>Sobre Mim</span>
+              <div class="nav-dot"></div>
+            </a>
+            <a href="#projetos" class="footer-nav-link">
+              <i class="fas fa-rocket"></i>
+              <span>Projetos</span>
+              <div class="nav-dot"></div>
+            </a>
+            <a href="#duoflow" class="footer-nav-link">
+              <i class="fas fa-code-branch"></i>
+              <span>DuoFlow</span>
+              <div class="nav-dot"></div>
+            </a>
+            <a href="#contato" class="footer-nav-link">
+              <i class="fas fa-comment-dots"></i>
+              <span>Contato</span>
+              <div class="nav-dot"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna de contato -->
+        <div class="footer-column">
+          <h3 class="column-title">
+            <i class="fas fa-paper-plane"></i> Vamos Conectar?
+          </h3>
+          <div class="contact-info-footer">
+            <a href="mailto:gustavorodriguessud87@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">gustavorodriguessud87@gmail.com</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Localização</span>
+                <span class="contact-value">Carapicuíba, SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna de redes sociais -->
+        <div class="footer-column">
+          <h3 class="column-title">
+            <i class="fas fa-share-alt"></i> Redes Sociais
+          </h3>
+          <div class="social-grid">
+            <a href="https://github.com/duguzin" target="_blank" class="social-card github">
+              <div class="social-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="social-info">
+                <span class="social-name">GitHub</span>
+                <span class="social-user">@duguzin</span>
+              </div>
+              <div class="social-arrow">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/gustavo-rodrigues-2288852aa" target="_blank"
+              class="social-card linkedin">
+              <div class="social-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="social-info">
+                <span class="social-name">LinkedIn</span>
+                <span class="social-user">Gustavo Rodrigues</span>
+              </div>
+              <div class="social-arrow">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/duguzin" target="_blank" class="social-card instagram">
+              <div class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="social-info">
+                <span class="social-name">Instagram</span>
+                <span class="social-user">@duguzin</span>
+              </div>
+              <div class="social-arrow">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divisor animado -->
+      <div class="footer-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- Footer inferior -->
+      <div class="footer-bottom">
+        <!-- Badge de tecnologias -->
+        <div class="tech-badges">
+          <span class="tech-badge">
+            <i class="fab fa-html5"></i> HTML5
+          </span>
+          <span class="tech-badge">
+            <i class="fab fa-css3-alt"></i> CSS3
+          </span>
+          <span class="tech-badge">
+            <i class="fab fa-js"></i> JavaScript
+          </span>
+          <span class="tech-badge">
+            <i class="fab fa-python"></i> Python
+          </span>
+          <span class="tech-badge">
+            <i class="fas fa-microchip"></i> IoT
+          </span>
+          <span class="tech-badge">
+            <i class="fas fa-code"></i> Dart
+          </span>
+          <span class="tech-badge">
+            <i class="fas fa-mobile-alt"></i> Flutter
+          </span>
+        </div>
+
+        <!-- Copyright com efeito -->
+        <div class="copyright-container">
+          <p class="copyright">
+            © <span class="copyright-year">2025</span> Gustavo Rodrigues
+            <span class="copyright-separator">|</span>
+            <span class="copyright-text">Todos os direitos reservados</span>
+          </p>
+          <p class="footer-quote">
+            "Unindo criatividade, tecnologia e eletrônica para construir o futuro"
+          </p>
+        </div>
+
+        <!-- Botão de voltar ao topo personalizado -->
+        <button id="footerBackToTop" class="footer-back-to-top">
+          <div class="back-to-top-icon">
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <span class="back-to-top-text">Topo</span>
+          <div class="back-to-top-pulse"></div>
+        </button>
+      </div>
     </div>
-    <div class="hero-particles"></div>
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2>HAITI FUTEBOL CLUBE</h2>
-                <p><i class="fas fa-calendar-alt"></i> novembro 2024 · amigos, raça e tradição</p>
-                <p><i class="fas fa-fist-raised"></i> HAITI LUTAS · boxe · jiu-jitsu · wrestling</p>
+
+    <!-- Efeitos de partículas no fundo -->
+    <!-- <div class="footer-particles">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+  </div> -->
+  </footer>
+
+  <!-- Modal Aprimorado -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Carrossel de Imagens/Vídeos -->
+        <div class="media-carousel">
+          <div class="swiper-container">
+            <div class="swiper-wrapper" id="modal-media">
+              <!-- Slides serão adicionados dinamicamente -->
             </div>
-            <div class="hero-flag">
-                <i class="fas fa-flag"></i>
-            </div>
+
+            <!-- Navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Paginação -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+
+          <!-- Miniaturas -->
+          <div class="media-thumbnails" id="modal-thumbnails">
+            <!-- Miniaturas serão adicionadas dinamicamente -->
+          </div>
+
         </div>
+
+        <div class="modal-info">
+          <div class="project-links" id="modal-links">
+            <!-- Links serão adicionados dinamicamente -->
+          </div>
+
+          <div class="project-description">
+            <h4><i class="fas fa-info-circle"></i> Sobre o Projeto</h4>
+            <p id="modal-desc"></p>
+          </div>
+
+          <div class="modal-tech">
+            <h4><i class="fas fa-tools"></i> Tecnologias Utilizadas</h4>
+            <div id="modal-tech-tags"></div>
+          </div>
+
+          <div class="project-features" id="modal-features">
+            <!-- Features serão adicionadas dinamicamente -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary close-modal">Fechar</button>
+      </div>
     </div>
-</div> -->
+  </div>
 
-<div class="container">
-    <!-- SLIDER (APENAS ISSO É SLIDER) -->
-    <div class="slider-container" id="sliderContainer">
-        <div class="slider" id="slider">
-            <div class="slide">
-                <div class="slide-image" id="slide1-img" style="background-image: url('IMAGENS/haiti-fim-de-jogo-2.jpeg')"></div>
-                <div class="slide-content">
-                    <i class="fas fa-trophy"></i>
-                    <h3>HAITI NA FINAL</h3>
-                    <p>Time venceu a semifinal por 7 a 5 contra o Kenya.</p>
-                    <span class="date-badge">21 fev 2025</span>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-image" id="slide2-img" style="background-image: url('./IMAGENS/despedida-felipe.jpeg')"></div>
-                <div class="slide-content">
-                    <i class="fas fa-fist-raised"></i>
-                    <h3>DESPEDIDA</h3>
-                    <p>O time se despede de nosso grande artilheiro e camisa 9 Felipe</p>
-                    <span class="date-badge">18 mai 2025</span>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-image" id="slide3-img" style="background-image: url('./IMAGENS/base-haiti.jpeg')"></div>
-                <div class="slide-content">
-                    <i class="fas fa-seedling"></i>
-                    <h3>BASE EM ALTA</h3>
-                    <p>Dia de treinamento e peneira com a base.</p>
-                    <span class="date-badge">20 abr 2025</span>
-                </div>
-            </div>
+  <!-- Botão Voltar ao Topo -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Loading Overlay - Coloque antes do </body> -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-cartoon">
+      <div class="loading-face">
+        <div class="loading-eyes">
+          <div class="loading-eye"></div>
+          <div class="loading-eye"></div>
         </div>
-        <button class="slider-btn prev" id="prevSlide">❮</button>
-        <button class="slider-btn next" id="nextSlide">❯</button>
+        <div class="loading-mouth"></div>
+        <div class="loading-cheeks">
+          <div class="loading-cheek"></div>
+          <div class="loading-cheek"></div>
+        </div>
+      </div>
+      <div class="loading-text">
+        Carregando<span class="dots"></span>
+      </div>
     </div>
-</div>
-
-<main>
-    <!-- HISTÓRIA -->
-    <section id="historia">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-book-open"></i> nossa história</h2>
-            <div class="historia-grid">
-                <div class="historia-imagem" id="historia-img" style="background-image: url('./IMAGENS/foto-haiti.jpeg')"></div>
-                <div class="historia-texto">
-                    <h3>uma família chamada Haiti</h3>
-                    <p>Tudo começou em novembro de 2024, quando um grupo de amigos decidiu criar um time de futebol que representasse a união e a garra. O nome Haiti foi escolhido como homenagem à resiliência do povo haitiano.</p>
-                    <p>O primeiro treino foi no campinho do próprio Haiti, com mais vontade do que chuteiras. Hoje somos mais de 20 atletas e uma modalidade de lutas.</p>
-                </div>
-            </div>
-            <div class="cards-historia">
-                <div class="card-historia"><i class="fas fa-handshake"></i><h4>fundação</h4><p>Nov/2024 · 6 amigos</p></div>
-                <div class="card-historia"><i class="fas fa-trophy"></i><h4>1ª vitória</h4><p>4x2 Inglaterra</p></div>
-                <div class="card-historia"><i class="fas fa-dove"></i><h4>espírito</h4><p>homenagem Haiti</p></div>
-                <div class="card-historia"><i class="fas fa-fist-raised"></i><h4>haiti lutas</h4><p>desde jan/2026</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRESIDENTE -->
-    <section id="presidente">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-crown"></i> nosso presidente</h2>
-            <div class="presidente-card">
-                <div class="presidente-foto" id="presidente-img" style="background-image: url('./IMAGENS/presidente-haiti.jpeg')"></div>
-                <div class="presidente-texto">
-                    <h3>Fernando "Fernandão"</h3>
-                    <p>Haiti elege seu presidente que veste a camisa com o coração.</p>
-                    <p><i class="fas fa-quote-right"></i> "O Haiti FC é a prova que um sonho de amigos pode virar um gigante."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JOGADORES -->
-    <section id="jogadores">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-users"></i> nossos jogadores</h2>
-            <div class="players-grid">
-                <div class="player-card">
-                    <div class="player-img" id="jogador1-img" style="background-image: url('./IMAGENS/JOGADORES/haiti-gusta.png')"></div>
-                    <h4>Gusta</h4>
-                    <p>goleiro - 1</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador2-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-firmino.png)"></div>
-                    <h4>Firmino</h4>
-                    <p>21</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador3-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-digo.png)"></div>
-                    <h4>Digo</h4>
-                    <p>19</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador4-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-bryan.png)"></div>
-                    <h4>Bryan</h4>
-                    <p>16</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador5-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-vito.png)"></div>
-                    <h4>Vito</h4>
-                    <p>8</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-guigui.png)"></div>
-                    <h4>GuiGui</h4>
-                    <p>6</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-dugu.png)"></div>
-                    <h4>Dugu</h4>
-                    <p>11</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-baby.png)"></div>
-                    <h4>BabyMonkey</h4>
-                    <p>10</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-img" id="jogador6-img" style="background-image: url(./IMAGENS/JOGADORES/haiti-felipe.png)"></div>
-                    <h4>Felipe</h4>
-                    <p>9</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JOGOS -->
-    <section id="jogos">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-camera-retro"></i> momentos dos jogos</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" id="jogo1-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-jogo-fora.jpeg')">
-                    <div class="legenda">mai/25</div>
-                </div>
-                <div class="gallery-item" id="jogo2-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-treino-base.jpeg')">
-                    <div class="legenda">jun/25</div>
-                </div>
-                <div class="gallery-item" id="jogo3-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/haiti-treino-final.jpeg')">
-                    <div class="legenda">jul/25</div>
-                </div>
-                <div class="gallery-item" id="jogo4-img" style="background-image: url('./IMAGENS/MOMENTOS-JOGOS/filhos-haiti.jpeg')">
-                    <div class="legenda">fev/25</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LUTAS -->
-    <section id="lutas">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-fist-raised"></i> haiti lutas</h2>
-            <div class="lutas-block">
-                <div style="flex:2"><h3>🥊 FORÇA & HONRA</h3><p>Jiu-jitsu, wrestling, no gi e luta livre. Mestre Nilson.</p></div>
-                <div style="flex:1; text-align:center;"><i class="fas fa-hand-back-fist" style="font-size: clamp(4rem, 10vw, 6rem); color:var(--haiti-gold);"></i></div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" id="luta1-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-1.jpeg')">
-                    <div class="legenda">mar/26</div>
-                </div>
-                <div class="gallery-item" id="luta2-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-2.jpeg')">
-                    <div class="legenda">mar/26</div>
-                </div>
-                <div class="gallery-item" id="luta3-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-3.jpeg')">
-                    <div class="legenda">fev/26</div>
-                </div>
-                <div class="gallery-item" id="luta4-img" style="background-image: url('./IMAGENS/LUTAS/haiti-lutas-4.jpeg')">
-                    <div class="legenda">out/25</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOTÍCIAS -->
-    <section id="noticias">
-        <div class="container">
-            <h2 class="section-title"><i class="fas fa-newspaper"></i> últimas notícias</h2>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
-                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">05 mar 2025</span><h4 style="font-size:1.5rem;">🇭🇹 Haiti na final</h4><p>Venceu a semifinal por 4 a 2.</p></div>
-                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">29 mar 2026</span><h4 style="font-size:1.5rem;">🥊 Lutas estreia</h4><p>Dugu lutará o Favela Fight.</p></div>
-                <div class="player-card" style="text-align:left;"><span style="background:var(--haiti-gold); padding:4px 12px; border-radius:40px; display:inline-block; margin-bottom:8px; font-weight:600; font-size:0.85rem;">01 fev 2025</span><h4 style="font-size:1.5rem;">⚡ base em alta</h4><p>João Ferro convocado.</p></div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Haiti FC</h4>
-                <p><i class="fas fa-calendar-alt"></i> nov/2024</p>
-                <p><i class="fas fa-map-marker-alt"></i> Campo do Haiti</p>
-                <p><i class="fas fa-users"></i> 20+ atletas</p>
-            </div>
-            <div class="footer-col">
-                <h4>Haiti Lutas</h4>
-                <p><i class="fas fa-fist-raised"></i> nogi · jiu-jitsu</p>
-                <p><i class="fas fa-clock"></i> ter · qui 18:15h</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p><i class="fas fa-envelope"></i> haitioficial157@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> em breve</p>
-
-                <div class="social-icons">
-
-                    <a href="https://www.instagram.com/haitioficial157?igsh=MTBiN3R5aHhzaWhvMA==" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://discord.gg/XvxWByEC" target="_blank">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p><i class="fas fa-futbol"></i> HAITI FUTEBOL CLUBE · HAITI LUTAS <i class="fas fa-fist-raised"></i></p>
-            <p>© 2025 · orgulho haitiano</p>
-            <div class="footer-flag">
-                <i class="fas fa-square" style="color:var(--haiti-navy);"></i>
-                <i class="fas fa-square" style="color:var(--haiti-red);"></i>
-                <i class="fas fa-square" style="color:var(--haiti-gold);"></i>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- BOTÃO VOLTAR AO TOPO -->
-<div class="back-to-top" id="backToTop">
-    <i class="fas fa-arrow-up"></i>
-</div>
-
-<script src="./JS/script.js"></script>
-
+  </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./Js/script.js"></script>
 </body>
+
 </html>
