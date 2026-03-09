@@ -18,6 +18,9 @@
         { elemento: document.getElementById('jogador4-img'), texto: 'MV' },
         { elemento: document.getElementById('jogador5-img'), texto: 'FP' },
         { elemento: document.getElementById('jogador6-img'), texto: 'CS' },
+        { elemento: document.getElementById('jogador7-img'), texto: 'DG' },
+        { elemento: document.getElementById('jogador8-img'), texto: 'BM' },
+        { elemento: document.getElementById('jogador9-img'), texto: 'FL' },
         { elemento: document.getElementById('jogo1-img'), texto: '6X2' },
         { elemento: document.getElementById('jogo2-img'), texto: 'CLÁSSICO' },
         { elemento: document.getElementById('jogo3-img'), texto: 'ACAMP' },
@@ -53,25 +56,64 @@
         }
     });
 
-    // MENU HAMBÚRGUER
+    // MENU HAMBÚRGUER - CORRIGIDO
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');
+    const menuOverlay = document.getElementById('menuOverlay');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
+    // Função para fechar o menu
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navList.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restaura rolagem
+    }
+
+    // Função para abrir o menu
+    function openMenu() {
+        hamburger.classList.add('active');
+        navList.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
+    }
+
+    // Toggle do menu ao clicar no hamburger
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (navList.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
 
+    // Fechar ao clicar no overlay
+    menuOverlay.addEventListener('click', () => {
+        closeMenu();
+    });
+
+    // Fechar ao clicar em um link do menu
     document.querySelectorAll('.nav-list li a').forEach(link => {
         link.addEventListener('click', (e) => {
-            hamburger.classList.remove('active');
-            navList.classList.remove('active');
+            closeMenu();
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
+    });
+
+    // Prevenir que cliques dentro do menu fechem ele (bubbling)
+    navList.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Fechar menu ao redimensionar para desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && navList.classList.contains('active')) {
+            closeMenu();
+        }
     });
 
     // SLIDER COM SWIPE

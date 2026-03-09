@@ -115,7 +115,6 @@
 
         .hamburger {
             display: none;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             cursor: pointer;
@@ -124,34 +123,44 @@
             height: 45px;
             border-radius: 50%;
             border: 3px solid white;
-            z-index: 30;
+            z-index: 1002;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .hamburger span { 
-            width: 24px; 
-            height: 4px; 
-            background: var(--haiti-navy); 
-            margin: 3px 0; 
-            border-radius: 6px; 
-            transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            display: block;
+        .hamburger span {
+            position: absolute;
+            width: 24px;
+            height: 4px;
+            background: var(--haiti-navy);
+            border-radius: 6px;
+            transition: 0.4s ease;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
+        .hamburger span:nth-child(1){
+            transform: translateY(-8px);
         }
 
-        .hamburger.active span:nth-child(2) {
+        .hamburger span:nth-child(2){
+            transform: translateY(0);
+        }
+
+        .hamburger span:nth-child(3){
+            transform: translateY(8px);
+        }
+
+        /* animação para X */
+        .hamburger.active span:nth-child(1){
+            transform: rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2){
             opacity: 0;
-            transform: scale(0);
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
+        .hamburger.active span:nth-child(3){
+            transform: rotate(-45deg);
         }
-
         /* ===== HERO ESPETACULAR ===== */
         .hero {
             background: linear-gradient(135deg, var(--haiti-navy) 0%, #1a304a 40%, var(--haiti-red) 100%);
@@ -660,6 +669,17 @@
         .presidente-texto h3 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-family: 'Bangers', cursive; color: var(--haiti-navy); margin-bottom: 10px; }
         .presidente-texto p { font-size: clamp(1rem, 2vw, 1.2rem); margin: 10px 0; }
         .presidente-texto i { color: var(--haiti-red); font-size: 1.5rem; margin-right: 8px; }
+
+        @media (max-width: 768px) {
+            .presidente-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .presidente-foto {
+                margin: 0 auto;
+            }
+        }
 
         /* JOGADORES */
         .players-grid {
